@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "norwester";
+    src: url("../font/norwester/norwester.otf");
+}
+@font-face {
+    font-family: "roboto";
+    src: url("../font/roboto/Roboto-Regular.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+       height: 842px;
+       width: 595px;
+       /* to centre page on screen*/
+       margin-left: auto;
+       margin-right: auto;
+       border: 1px solid red;
+   }
+
+#header{
+  background-image: url(../images/header.jpg);
+  opacity: 0.4;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img{
+  position: absolute;
+  border-radius: 50%;
+  /*border: 1px solid black;*/
+  width: 120px;
+  top: 140px;
+  left: 410px;
+}
+.nom{
+  margin-left: 20px;
+  margin-top: 15px;
+  z-index: 500;
+}
+h1{
+  color: white;
+}
+h2{
+  color: #d39833;
+}
+.texte-titre{
+    font-family: "norwester";
+    font-weight: bold;
+}
+h4{
+  font-family: "norwester";
+  margin-left: 20px;
+  color: #484848;
+}
+main{
+  display: flex;
+}
+h3{
+    color: #484848;
+    margin-left: 5px;
+}
+.aboutme{
+  text-align: justify;
+  font-family: "roboto";
+  margin-left: 20px;
+  margin-right: 15px;
+  color: #484848;
+  font-size: 14px;
+}
+.media{
+  color: #484848;
+}
+a{
+  text-decoration: none;
+  color: #484848;
+}
+p,h5,h6{
+  font-family: "roboto";
+  color: #484848;
+}
+p{
+  margin-left: px;
+}
+h5{
+  margin-left: 25px;
+}
+h6{
+  margin-left: 30px;
+}
+.skills-left{
+width: 40%;
+background-color: #d39833;
+height: 95vh;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.skills-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.profil-left{
+  margin-top: 20px;
+}
+.titres{
+  margin-left: 10px;
+  margin-right: 20px;
+  border-bottom: 4px solid #d39833;
+}
+.contact{
+  color: white;
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  z-index: 500;
+  height: 70px;
+  justify-content: space-between;
+
+
+}
+.vert{
+  color: green;
+}
+.orange{
+  color: orange;
+}
+.rouge{
+  color: red;
+}
+.blanc{
+  color: white;
+}
+.color{
+  display: flex;
+  flex-direction: row;
+}
+.php{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5px;
+}

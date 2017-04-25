@@ -1,0 +1,99 @@
+/*violet #d9c7ed
+bleu ciel #b2ecf7
+framboise #f88595
+light orange #fcc197*/
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  margin: auto;
+  background-color: lightgreen;
+  box-shadow: 10px 10px 5px #888888;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.globe{
+  width: 50px;
+}
+.logo{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sign{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+footer{
+  margin: auto;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: -10px -10px 5px #888888;
+  bottom: 0px;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-left: 0px;
+}
+.nav{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+li{
+  border: 1px solid lightgreen;
+  border-top-right-radius: 25px;
+  height: 50px;
+  width: 250px;
+  margin: auto;
+  list-style-type: none;
+}
+.article{
+  margin: auto;
+  width: 70%;
+  height: 480px;
+  background-color: #f88595;
+  margin-bottom: 20px;
+}
+.reseau{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/*------------------------------FORM---------------------------------*/
+.form_sign_in, .form_sign_up{
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color:#b2ecf7;
+  box-shadow: 10px 10px 5px #888888;
+  margin-bottom: 10px;
+}
+input.ng-invalid-required {
+    background-color: grey;
+}
+input.ng-valid-required {
+    background-color: lightgreen;
+}
+input{
+  margin-bottom: 10px;
+  height: 40px;
+  margin: 10px;
+}
+.btn-sign{
+  background-color: lightgreen;
+}
