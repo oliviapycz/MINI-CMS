@@ -1,4 +1,3 @@
-<?php require 'model.php' ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,7 +14,7 @@
     <main>
       <nav class="nav">
         <ul>
-          <a href="#art"><li>Cuba | 2017</li></a>
+          <div class="cli"><li>Cuba | 2017</li></div>
           <li>Pérou | 2017</li>
           <li>Canada | 2016</li>
           <li>Birmanie | 2015</li>
@@ -23,20 +22,21 @@
         </ul>
       </nav>
 
-      <article class="article art">
+      <article class="article">
         <h2>TITRE</h2>
         <h3>Prénom NOM | DATE</h3>
+        <h4></h4>
 
 
-        <div class="signin_jquery"> <?php require "signin_form.php" ?> </div>
-        <div class="signup_jquery"> <?php require "signup_form.php" ?> </div>
+        <div class="signin_jquery"> <?php require "../controller/signin_form.php" ?> </div>
+        <div class="signup_jquery"> <?php require "../controller/signup_form.php" ?> </div>
 
       </article>
     </main>
 
       <?php require 'footer.php' ?>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
     </script>
   </body>

@@ -101,3 +101,12 @@ input{
 .btn-sign{
   background-color: lightgreen;
 }
+/*FORM CREATION ARTICLE*/
+.input_title_create{
+  width: 350px;
+}
+.paraph_create{
+  width: 90%;
+  margin: 5px;
+
+}

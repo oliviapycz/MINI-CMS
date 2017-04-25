@@ -1,6 +1,6 @@
 
 <!-- ***********FORM SIGN UP THAT APPEAR********** -->
-        <form  class="form_sign_up" action="model.php" method="post">
+        <form  class="form_sign_up" action="../src/model_sign_up.php" method="post">
           <input required type="text" name="lastname" value="" placeholder="lastname">
 
           <input required type="text" name="firstname" value="" placeholder="firstname">
