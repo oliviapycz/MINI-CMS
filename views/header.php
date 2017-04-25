@@ -10,9 +10,9 @@
     </div>
 
     <div class="sign">
-      <a href="#" ng-click="showsignin=true" >SIGN IN</a>
+      <a class="sin" href="#">SIGN IN</a>
       <p>|</p>
-       <a  href="#"  ng-click="showsignup=true" >SIGN UP</a>
+       <a class="sup" href="#">SIGN UP</a>
     </div>
 
 </header>

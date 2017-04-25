@@ -1,5 +1,9 @@
-var testApp = angular.module('app',[]);
+$('.sin').on('click', function(){
+  $('.signin_jquery').fadeIn().css('display', 'flex');
+  $('.signup_jquery').css('display', 'none');
+});
 
-testApp.controller('testCtrl', function($scope){
-  $scope.name = "olivia";
+$('.sup').on('click', function(){
+  $('.signup_jquery').fadeIn().css('display', 'flex');
+  $('.signin_jquery').css('display', 'none');
 });
