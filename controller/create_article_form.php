@@ -21,11 +21,11 @@ if( isset($_SESSION['email_sign_in']) && isset($_SESSION['password_sign_in']))
       <input type="text" name="year" value="" placeholder="année de la visite">
       <input class="input_title_create" type="text" name="title" value="" placeholder="title">
 <br>
-      <textarea class="paraph_create" name="first_paraph" rows="8" cols="80">first_paraph</textarea>
+      <textarea class="paraph_create" name="first_paraph" rows="8" cols="80" placeholder="first_paraph"></textarea>
 <br />
-            <textarea class="paraph_create" name="second_paraph" rows="8" cols="80">second_paraph</textarea>
+            <textarea class="paraph_create" name="second_paraph" rows="8" cols="80" placeholder="second_paraph"></textarea>
 <br>
-                  <textarea class="paraph_create" name="third_paraph" rows="8" cols="80">third_paraph</textarea>
+                  <textarea class="paraph_create" name="third_paraph" rows="8" cols="80" placeholder="third_paraph"></textarea>
 <br>
                   <input type="submit" name="" value="ENVOYER">
     </form>

@@ -10,5 +10,4 @@ $('.sup').on('click', function(){
 
 // $('.click_country').on('click', function(){
 //   $('.click_article').css('display', 'inherit');
-
-});
+// });

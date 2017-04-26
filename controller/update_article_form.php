@@ -23,7 +23,7 @@ $country = $_GET['country'];
         <?php
             $reponse = $bdd->query('SELECT * FROM article ORDER BY ID DESC LIMIT 0, 8');
             foreach ($reponse as $donnees): ?>
-        <div class="click_country"><li><?= "<a href='update_article_form.php?country=" .strtoupper($donnees['country']). "' >".$donnees['country']."</a>"?></li>
+        <div class="click_country"><li><?= "<a href='update_article_form.php?country=" .strtoupper($donnees['country']). "' >".strtoupper($donnees['country'])."</a>"?></li>
           <?php endforeach ?>
           <li>VOIR PLUS</li>
         </div>
@@ -31,12 +31,12 @@ $country = $_GET['country'];
     </nav>
     <article class="article">
 <?php
-      $reponse = $bdd->query('SELECT * FROM article WHERE country="'.$country.'"');
+      $reponse = $bdd->query('SELECT * FROM article WHERE country="'.strtoupper($country).'"');
         foreach ($reponse as $donnees): ?>
 
 
     <form class="" action="../src/model_update_article.php" method="post">
-      <input type="text" name="country" value="<?php echo $donnees['country'] ?>" placeholder="pays visité">
+      <input type="text" name="country" value="<?php echo strtoupper($donnees['country']) ?>" placeholder="pays visité">
       <input type="text" name="year" value="<?php echo $donnees['year'] ?>" placeholder="année de la visite">
       <input class="input_title_create" type="text" name="title" value="<?php echo $donnees['title'] ?>" placeholder="title">
 <br>

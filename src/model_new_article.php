@@ -1,7 +1,7 @@
 <?php
-// session_start();
-// if( isset($_SESSION['mail_sign_in']) && isset($_SESSION['password_sign_in']))
-// {
+session_start();
+if( isset($_SESSION['mail_sign_in']) && isset($_SESSION['password_sign_in']))
+{
 $country = $_POST['country'];
 $year = $_POST['year'];
 $title = $_POST['title'];
@@ -21,4 +21,5 @@ $req->execute(array(
   'third_paraph' => $third_paraph
 ));
 header('Location:http://localhost/~olivia/CHEFOEUVRE/blogvoyageur/views/espace_membre.php');
+
 ?>

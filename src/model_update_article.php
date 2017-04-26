@@ -2,9 +2,7 @@
 
 require '../db/database.php';
 
-
 $country = $_GET['country'];
-
 $newcountry = $_POST['country'];
 $newyear = $_POST['year'];
 $newtitle = $_POST['title'];
@@ -19,7 +17,7 @@ $upt = $bdd->prepare('UPDATE article SET
   first_paraph= :newfirst_paraph,
   second_paraph= :newsecond_paraph,
   third_paraph= :newthird_paraph
-  WHERE country= :country');
+   WHERE country= :country');
 
 $upt->execute(array(
   'newcountry'=> $newcountry,
@@ -30,5 +28,5 @@ $upt->execute(array(
   'newthird_paraph' => $newthird_paraph,
   'country' => $_GET['country']
 ));
+
  header('Location:http://localhost/~olivia/CHEFOEUVRE/blogvoyageur/views/espace_membre.php');
-?>
