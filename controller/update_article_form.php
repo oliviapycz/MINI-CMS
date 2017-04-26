@@ -3,31 +3,8 @@ require "../db/database.php"
 // session_start();
 // if( isset($_SESSION['email_sign_in']) && isset($_SESSION['password_sign_in']))
 // { ?>
-
-
 <?php
-
 $country = $_GET['country'];
-
-$newcountry = $_POST['country'];
-$newyear = $_POST['year'];
-$newtitle = $_POST['title'];
-$newfirst_paraph = $_POST['first_paraph'];
-$newsecond_paraph = $_POST['second_paraph'];
-$newthird_paraph = $_POST['third_paraph'];
-
-$upt = $bdd->prepare('UPDATE article SET country= :newcountry, year= :newyear, title= :newtitle, first_paraph= :newfirst_paraph, second_paraph= : newsecond_paraph, third_paraph= :newthird_paraph WHERE country= :country');
-
-$upt->execute(array(
-  'newcountry'=> $newcountry,
-  'newyear'=> $newyear,
-  'newtitle' => $newtitle,
-  'newfirst_paraph' => $newfirst_paraph,
-  'newsecond_paraph' => $newsecond_paraph,
-  'newthird_paraph' => $newthird_paraph,
-  'country' => $_GET['country']
-));
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +23,7 @@ $upt->execute(array(
         <?php
             $reponse = $bdd->query('SELECT * FROM article ORDER BY ID DESC LIMIT 0, 8');
             foreach ($reponse as $donnees): ?>
-        <div ><?= "<a href='update_article_form.php?country=" .strtoupper($donnees['country']). "' >".$donnees['country']."</a>"?></li>
+        <div class="click_country"><li><?= "<a href='update_article_form.php?country=" .strtoupper($donnees['country']). "' >".$donnees['country']."</a>"?></li>
           <?php endforeach ?>
           <li>VOIR PLUS</li>
         </div>
@@ -55,8 +32,8 @@ $upt->execute(array(
     <article class="article">
 <?php
       $reponse = $bdd->query('SELECT * FROM article WHERE country="'.$country.'"');
-        while ($donnees = $reponse->fetch()) {
-    ?>
+        foreach ($reponse as $donnees): ?>
+
 
     <form class="" action="../src/model_update_article.php" method="post">
       <input type="text" name="country" value="<?php echo $donnees['country'] ?>" placeholder="pays visité">
@@ -71,16 +48,16 @@ $upt->execute(array(
 <br>
                   <input type="submit" name="" value="ENVOYER">
     </form>
-<?php
 
 
-        $reponse->closeCursor();
-        ?>
+<?php endforeach ?>
+        <!-- $reponse->closeCursor(); -->
+
   </article>
   </main>
     <?php require '../views/footer.php' ?>
   </body>
 </html>
 <?php
-}
+// }
  ?>

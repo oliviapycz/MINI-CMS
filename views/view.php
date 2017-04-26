@@ -1,4 +1,5 @@
 <?php require "../db/database.php" ?>
+<?php $country = $_GET['country']; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,9 +18,9 @@
       <nav class="nav">
         <ul>
           <?php
-              $reponse = $bdd->query('SELECT * FROM article ORDER BY ID DESC LIMIT 0, 8');
+              $reponse = $bdd->query('SELECT * FROM article ORDER BY year DESC LIMIT 0, 8');
               foreach ($reponse as $donnees): ?>
-          <div class="click_country"><li><?php echo strtoupper($donnees['country']) . "|" .  $donnees['year']; ?></li>
+          <div class=""><li><?= "<a href='view.php?country=" .strtoupper($donnees['country']). "' >".strtoupper($donnees['country']) . "|" . $donnees['year']."</a>" ?></li>
             <?php endforeach ?>
             <li>VOIR PLUS</li>
           </div>
@@ -28,22 +29,19 @@
 
       <article class="article">
           <?php
-          //  $reponse = $bdd->query('SELECT * FROM article
-          //             ORDER BY ID DESC LIMIT 0, 8');
-          //  foreach ($reponse as $donnees): ?>
-        <div class="click_article">
+           $reponse = $bdd->query('SELECT * FROM article WHERE country="'.strtolower($country).'"');
+              foreach ($reponse as $donnees):?>
+        <div class="">
           <h3><?php echo $donnees['title']; ?></h3>  <br />
-          <h5><?php echo strtolower($donnees['firstname']) . strtoupper($donnees['lastname']);?> </h5> <p>|</p><em>mis à jour le :</em> <?php echo $donnees['date_modification'];?> </h5>
+          <h5><?php echo strtolower($donnees['firstname']) . strtoupper($donnees['lastname']); ?> </h5> <p>|</p><em>mis à jour le :</em> <?php echo $donnees['date_modification']; ?> </h5>
            <br /><br>
           <p><?php echo $donnees["first_paraph"]; ?></p> <br />
           <p><?php echo $donnees["second_paraph"]; ?></p> <br />
           <p><?php echo $donnees["third_paraph"]; ?></p> <br />
-          <?php
-          //  endforeach
-            ?>
+
         </div>
 
-
+      <?php endforeach ?>
 
         <div class="signin_jquery"> <?php require "../controller/signin_form.php" ?> </div>
         <div class="signup_jquery"> <?php require "../controller/signup_form.php" ?> </div>

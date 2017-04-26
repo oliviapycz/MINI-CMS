@@ -8,7 +8,7 @@ $('.sup').on('click', function(){
   $('.signin_jquery').css('display', 'none');
 });
 
-$('.click_country').on('click', function(){
-  $('.click_article').fadeIn().css('display', 'inherit');
+// $('.click_country').on('click', function(){
+//   $('.click_article').css('display', 'inherit');
 
 });

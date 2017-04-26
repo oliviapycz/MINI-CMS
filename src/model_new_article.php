@@ -11,7 +11,7 @@ $third_paraph = $_POST['third_paraph'];
 
 require '../db/database.php';
 
-$req = $bdd->prepare('INSERT INTO article (country, year, title, first_paraph, second_paraph, third_paraph) VALUES(:country, :year, :title, :first_paraph, :second_paraph, :third_paraph)');
+$req = $bdd->prepare('INSERT INTO article (country, year, title, first_paraph, second_paraph, third_paraph, date_modification) VALUES(:country, :year, :title, :first_paraph, :second_paraph, :third_paraph, NOW())');
 $req->execute(array(
   'country'=> $country,
   'year'=> $year,
