@@ -65,6 +65,9 @@ li{
   width: 250px;
   margin: auto;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .article{
   margin: auto;
@@ -87,12 +90,6 @@ li{
   box-shadow: 10px 10px 5px #888888;
   margin-bottom: 10px;
 }
-input.ng-invalid-required {
-    background-color: grey;
-}
-input.ng-valid-required {
-    background-color: lightgreen;
-}
 input{
   margin-bottom: 10px;
   height: 40px;
@@ -108,5 +105,16 @@ input{
 .paraph_create{
   width: 90%;
   margin: 5px;
-
+}
+.click_article{
+  display: none;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+}
+.click_country{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

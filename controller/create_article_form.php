@@ -1,3 +1,7 @@
+<?php
+session_start();
+if( isset($_SESSION['email_sign_in']) && isset($_SESSION['password_sign_in']))
+{ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,3 +33,4 @@
     <?php require '../views/footer.php' ?>
   </body>
 </html>
+<?php } ?>

@@ -7,3 +7,8 @@ $('.sup').on('click', function(){
   $('.signup_jquery').fadeIn().css('display', 'flex');
   $('.signin_jquery').css('display', 'none');
 });
+
+$('.click_country').on('click', function(){
+  $('.click_article').fadeIn().css('display', 'inherit');
+
+});

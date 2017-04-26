@@ -13,24 +13,20 @@
     <?php require 'header.php' ?>
 
     <main>
-
+      <?php
+          $reponse = $bdd->query('SELECT * FROM article WHERE country="cuba"');
+          // $reponse = $bdd->query('SELECT * FROM article'); PROBLEME!!!!!!
+          while ($donnees = $reponse->fetch())
+          {
+      ?>
       <nav class="nav">
         <ul>
-          <?php
-              $reponse = $bdd->query('SELECT * FROM article ORDER BY ID DESC LIMIT 0, 8');
-              foreach ($reponse as $donnees): ?>
-          <div class="click_country"><li><?php echo strtoupper($donnees['country']) . "|" .  $donnees['year']; ?></li>
-            <?php endforeach ?>
-            <li>VOIR PLUS</li>
-          </div>
+          <div class="click_country"><li><?php echo strtoupper($donnees['country']) . "|" .  $donnees['year']; ?></li></div>
         </ul>
       </nav>
 
       <article class="article">
-          <?php
-          //  $reponse = $bdd->query('SELECT * FROM article
-          //             ORDER BY ID DESC LIMIT 0, 8');
-          //  foreach ($reponse as $donnees): ?>
+
         <div class="click_article">
           <h3><?php echo $donnees['title']; ?></h3>  <br />
           <h5><?php echo strtolower($donnees['firstname']) . strtoupper($donnees['lastname']);?> </h5> <p>|</p><em>mis à jour le :</em> <?php echo $donnees['date_modification'];?> </h5>
@@ -38,12 +34,14 @@
           <p><?php echo $donnees["first_paraph"]; ?></p> <br />
           <p><?php echo $donnees["second_paraph"]; ?></p> <br />
           <p><?php echo $donnees["third_paraph"]; ?></p> <br />
-          <?php
-          //  endforeach
-            ?>
+      <?php
+    }
+      $reponse->closeCursor();
+      ?>
         </div>
 
-
+        <div class=""> <?php require "../controller/signin_form.php" ?>
+        FAIL TO CONNECT</div>
 
         <div class="signin_jquery"> <?php require "../controller/signin_form.php" ?> </div>
         <div class="signup_jquery"> <?php require "../controller/signup_form.php" ?> </div>

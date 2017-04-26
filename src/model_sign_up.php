@@ -16,4 +16,7 @@ $req->execute(array(
   'email' => $email,
   'password' => $password
 ));
+// session_start();
+// $_SESSION['email'] = $email;
+// $_SESSION['password'] = $password;
 header('Location:http://localhost/~olivia/CHEFOEUVRE/blogvoyageur/views/espace_membre.php');
