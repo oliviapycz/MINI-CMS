@@ -1,5 +1,6 @@
 <?php require "../db/database.php" ?>
 <?php $country = $_GET['country']; ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>

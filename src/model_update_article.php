@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+if( isset($_SESSION['mail_sign_in']) && isset($_SESSION['password_sign_in']))
+{
 require '../db/database.php';
 
 $country = $_GET['country'];
@@ -28,5 +30,6 @@ $upt->execute(array(
   'newthird_paraph' => $newthird_paraph,
   'country' => $_GET['country']
 ));
-
  header('Location:http://localhost/~olivia/CHEFOEUVRE/blogvoyageur/views/espace_membre.php');
+ }
+?>

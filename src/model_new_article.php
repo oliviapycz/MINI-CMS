@@ -21,5 +21,5 @@ $req->execute(array(
   'third_paraph' => $third_paraph
 ));
 header('Location:http://localhost/~olivia/CHEFOEUVRE/blogvoyageur/views/espace_membre.php');
-
+}
 ?>

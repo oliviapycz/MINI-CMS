@@ -1,5 +1,7 @@
 <?php
-require '../src/session.php'
+
+session_start();
+
 ?>
 <!DOCTYPE html>
 <html>

@@ -5,7 +5,7 @@
       <div><h1>T.W.I.M.H</h1></div>
     </div>
 
-    <div class=" ">
+    <div class="">
       <h1>The.World.Is.My.Home</h1>
     </div>
 
